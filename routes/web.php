@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\InvitacionReg;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +29,15 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/invitacion', function () {
+    
+    $correo = new InvitacionReg;
+    Mail::to('JMoran@voblakye.com')->send($correo);
+
+    return "Correo enviado!!";
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
