@@ -45,8 +45,22 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function adminlte_image(){
+        return 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png';
+    }
+    public function adminlte_desc(){
+        return 'Administrador';
+    }
+    public function adminlte_profile_url(){
+        return 'profile/username';
+    }
+
     //Relacion muchos a muchos
     public function clients(){
-        return $this->belongsToMany('App\Models\Clients');
+        return $this->belongsToMany('App\Models\clients');
+    }
+
+    public function logs(){
+        return $this->belongsToMany('App\Models\logs');
     }
 }

@@ -32,7 +32,7 @@ Route::get('/contact', function () {
 Route::get('/invitacion', function () {
     
     $correo = new InvitacionReg;
-    Mail::to('JMoran@voblakye.com')->send($correo);
+    Mail::to('JMoran@taurogas.com')->send($correo);
 
     return "Correo enviado!!";
 });

@@ -9,14 +9,16 @@ class payments extends Model
 {
     use HasFactory;
 
+    protected $guarded = []; 
+
     //Relacion muchos a muchos
-    public function clients(){
-        return $this->belongsToMany('App\Models\Clients');
+    public function client(){
+        return $this->hasOne('App\Models\Clients');
     }
-    public function companies(){
-        return $this->belongsToMany('App\Models\Companies');
+    public function company(){
+        return $this->hasOne('App\Models\Companies');
     }
-    public function suscriptions(){
-        return $this->belongsToMany('App\Models\Suscriptions');
+    public function suscription(){
+        return $this->hasOne('App\Models\Suscriptions');
     }
 }

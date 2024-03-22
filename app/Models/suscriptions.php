@@ -9,8 +9,10 @@ class suscriptions extends Model
 {
     use HasFactory;
 
+    protected $guarded = []; 
+
     //Relacion Uno a Muchos
-    public function suscriptions(){
-        return $this->hasOne('App\Models\Payments');
+    public function payments(){
+        return $this->belongsToMany('App\Models\Payments');
     }
 }

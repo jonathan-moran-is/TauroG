@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
 
             $table->string('name', 20);
-            $table->date('creation_date');
             $table->string('email', 20);
             $table->string('contact_data', 75);
 

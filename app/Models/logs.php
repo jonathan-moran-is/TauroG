@@ -9,6 +9,8 @@ class logs extends Model
 {
     use HasFactory;
 
+    protected $guarded = []; 
+
     //Relacion muchos a muchos
     public function clients(){
         return $this->belongsToMany('App\Models\Clients');

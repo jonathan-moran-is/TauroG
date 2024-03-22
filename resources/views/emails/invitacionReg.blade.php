@@ -8,5 +8,5 @@ Te invitamos a formar parte de nuestra aplicacion.
 @endcomponent
 
 Gracias por usar nuestra aplicacion, <br>
-Voblakye
+Tauro Gas
 @endcomponent
